@@ -24,15 +24,9 @@ app.use(cors()); // to prevent cors errors, open access to all origins
 app.use(morgan("dev")); // logging
 app.use(express.json()); // parse json bodies
 
-
 // ROUTES
 const clientController = require("./controllers/clients.js");
 app.use("/home", clientController);
-
-// app.get("/", (req, res) => {
-//     res.send("hello world");
-// });
-
 
 // LISTENER
 app.listen(PORT, () => console.log(`listening, ${PORT}`));
