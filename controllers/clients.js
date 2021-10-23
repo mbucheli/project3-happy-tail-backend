@@ -21,14 +21,14 @@ clientRouter.get("/", async (req, res) => {
 });
 
 // DELETE
-app.delete("/:id", async (req, res) => {
-    try {
-      res.json(await Client.findByIdAndRemove(req.params.id));
-    } catch (error) {
-      //send error
-      res.status(400).json(error);
-    }
-  });
+// app.delete("/:id", async (req, res) => {
+//     try {
+//       res.json(await Client.findByIdAndRemove(req.params.id));
+//     } catch (error) {
+//       //send error
+//       res.status(400).json(error);
+//     }
+//   });
 
 // CREATE
 clientRouter.post("/", async (req, res) => {
@@ -40,12 +40,12 @@ clientRouter.post("/", async (req, res) => {
 });
 
 // UPDATE 
-app.put("/:id", async (req, res) => {
-    try {
-      res.json(
-        await Client.findByIdAndUpdate(req.params.id, req.body, { new: true })
-      );
-    } catch (error) {
-      res.status(400).json(error);
-    }
-  });
+// app.put("/:id", async (req, res) => {
+//     try {
+//       res.json(
+//         await Client.findByIdAndUpdate(req.params.id, req.body, { new: true })
+//       );
+//     } catch (error) {
+//       res.status(400).json(error);
+//     }
+//   });
